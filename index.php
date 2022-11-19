@@ -14,4 +14,5 @@
             $respuesta = str_replace("\/", "/", $explode[0]);
         }
     echo $respuesta;
+echo "working";
 ?>
