@@ -13,5 +13,5 @@
 
             $respuesta = str_replace("\/", "/", $explode[0]);
         }
-    echo $link;
+    echo $respuesta;
 ?>
