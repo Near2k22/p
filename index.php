@@ -41,5 +41,10 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 $resp = curl_exec($curl);
 curl_close($curl);
 var_dump($resp);
+if(preg_match_all('/type="hidden" id="url" name="url" value="(.*)"/s', $resp, $matches)){
+    $explode = explode('"', $matches[1][0]);
 
+    $respuesta = str_replace("//apialfa.tomatomatela.club/ir/player.php?h=", "", $explode[0]);
+}
+echo $respuesta;
 ?>
