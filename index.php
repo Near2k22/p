@@ -13,6 +13,7 @@
 
             $respuesta = str_replace("//apialfa.tomatomatela.club/ir/player.php?h=", "", $explode[0]);
         }
+    echo $respuesta;
 ?>
 <?php
 
@@ -20,8 +21,9 @@ $url = "https://apialfa.tomatomatela.club/ir/rd.php";
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_POST, true);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_POST, TRUE);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($curl, CURLOPT_FOLLOWLOCATION, TRUE);
 
 $headers = array(
    "Content-Type: application/x-www-form-urlencoded",
