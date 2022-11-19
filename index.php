@@ -8,11 +8,10 @@
 
         $resultado = curl_exec($ch);
 
-        if(preg_match_all('/apialfa.tomatomatela.club(.*)"/', $resultado, $matches)){
+        if(preg_match_all('/id="OptL1"><iframe class="no-you" width="560" height="315" data-src="(.*)"/s', $resultado, $matches)){
             $explode = explode('"', $matches[1][0]);
 
             $respuesta = str_replace("\/", "/", $explode[0]);
         }
     echo $respuesta;
-echo "working";
 ?>
